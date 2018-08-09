@@ -33,6 +33,7 @@ function postsList(posts) {
     return <Post
         message={post.message}
         time={post.created_at}
+        id={post.id}
     />
   })
 }
