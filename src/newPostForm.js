@@ -6,6 +6,7 @@ export class NewPostForm extends React.Component {
     super(props);
     this.state = {
       formFields: {message: '', user_id:'1'},
+      updateParent: props.updateParent
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,13 +23,11 @@ export class NewPostForm extends React.Component {
 
   handleSubmit(event){
     event.preventDefault();
-    console.log('Handling submit...')
     let formFields = this.state.formFields;
-    console.log(formFields);
+    const updateParent = this.state.updateParent;
     axios.post('http://localhost:3000/posts/new', formFields)
-    .then(function(){
-      formFields.message = '';
-      this.setState(formFields);
+    .then(function(response){
+      updateParent();
     })
   }
 

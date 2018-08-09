@@ -7,7 +7,8 @@ export class Timeline extends React.Component {
     super();
     this.state = {
       posts: [],
-    }
+    };
+    this.fetchPosts = this.fetchPosts.bind(this);
   }
 
   render() {
@@ -15,19 +16,23 @@ export class Timeline extends React.Component {
     return (
 
         <div>
-          <NewPostForm />
+          <NewPostForm updateParent={this.fetchPosts}/>
           {postsList(posts)}
         </div>
     )
   }
 
   componentDidMount() {
-    console.log('API Called')
+    this.fetchPosts();
+  }
+
+  fetchPosts() {
+    console.log('API Called');
     fetch('http://localhost:3000/posts')
-    .then(response => response.json())
-    .then(data =>
-      this.setState({posts: data})
-    )
+        .then(response => response.json())
+        .then(data =>
+            this.setState({posts: data})
+        )
   }
 }
 
