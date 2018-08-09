@@ -1,6 +1,26 @@
 .post {
   background-color: white;
   margin: 20px 0 20px 0;
-  padding: 20px;
+  padding: 15px 20px 15px 20px;
   width: 660px;
+}
+
+.post_body {
+  padding: 10px 0 0 0;
+}
+
+.post_header {
+  border-bottom: 1px solid #D1D4D7;
+  line-height: 22px;
+  padding: 0 0 10px 0;
+}
+
+#post_username {
+  color: #385899;
+  font-weight: bold;
+}
+
+#post_time {
+  color: #ABAEAF;
+  font-size: 13px;
 }

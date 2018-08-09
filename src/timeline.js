@@ -4,7 +4,15 @@ import css from './timeline.css';
 function Post(props){
   return (
       <div className="post">
-        {props.message} posted at {props.time}
+        <div className="post_header">
+          <p id="post_username">Username</p>
+          <p id="post_time">Posted at {props.time}</p>
+        </div>
+        <div className="post_body">
+          {props.message}
+        </div>
+        <div className="post_footer">
+        </div>
       </div>
   )
 }
