@@ -1,0 +1,18 @@
+.container_header {
+  background-color: #385899;
+  color: white;
+  height: 35px;
+  letter-spacing: 1.5px;
+  margin: 0 0 20px 0;
+  padding: 20px;
+}
+
+#header_links {
+  float: right;
+}
+
+#header_title {
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+}
