@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post Post renders the message given 1`] = `
+<div
+  className="post"
+>
+  Hello
+   
+  <br />
+   (posted at 
+  Today
+  )
+</div>
+`;
