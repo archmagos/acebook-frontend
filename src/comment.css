@@ -1,0 +1,18 @@
+.comment {
+  background-color: #EAEBF0;
+  font-size: 13px;
+  padding: 8px;
+}
+
+.comment_footer {
+  color: #A0A1A5;
+}
+
+.comment_header_username {
+  display: inline;
+  padding: 0 10px 0 0;
+}
+
+.comment_header_body {
+  display: inline;
+}

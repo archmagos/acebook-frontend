@@ -1,21 +1,5 @@
 import React from "react";
-import css from './timeline.css';
-
-function Post(props){
-  return (
-      <div className="post">
-        <div className="post_header">
-          <p id="post_username">Username</p>
-          <p id="post_time">Posted at {props.time}</p>
-        </div>
-        <div className="post_body">
-          {props.message}
-        </div>
-        <div className="post_footer">
-        </div>
-      </div>
-  )
-}
+import {Post} from "./post";
 
 export class Timeline extends React.Component {
   constructor(props) {
@@ -27,13 +11,11 @@ export class Timeline extends React.Component {
 
   render() {
     const posts = this.state.posts;
-    let postsList = posts.map(function (post) {
-      return <Post
-          message={post.message}
-          time={post.created_at}
-      />
-    });
-    return postsList
+    return (
+        <div>
+          {postsList(posts)}
+        </div>
+    )
   }
 
   componentDidMount() {
@@ -44,4 +26,14 @@ export class Timeline extends React.Component {
       this.setState({posts: data})
     )
   }
+}
+
+function postsList(posts) {
+  return posts.map(function (post) {
+    return <Post
+        message={post.message}
+        time={post.created_at}
+        id={post.id}
+    />
+  })
 }
