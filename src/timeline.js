@@ -1,5 +1,6 @@
 import React from "react";
 import {Post} from "./post";
+import {NewPostForm} from "./newPostForm";
 
 export class Timeline extends React.Component {
   constructor(props) {
@@ -12,7 +13,9 @@ export class Timeline extends React.Component {
   render() {
     const posts = this.state.posts;
     return (
+
         <div>
+          <NewPostForm />
           {postsList(posts)}
         </div>
     )
