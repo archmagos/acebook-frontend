@@ -7,6 +7,7 @@ export class Post extends React.Component {
     this.state = {
       message: props.message,
       time: props.time,
+      id: props.id,
       comments:[],
     }
   }
@@ -24,7 +25,8 @@ export class Post extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/comments?post_id=1')
+    let id = this.state.id
+    fetch('http://localhost:3000/comments?post_id=' + id)
     .then(response => response.json())
     .then(data =>
       this.setState({comments: data})
