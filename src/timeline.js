@@ -1,12 +1,5 @@
 import React from "react";
-
-function Post(props){
-  return (
-      <div className="post">
-        {props.message} posted at {props.time}
-      </div>
-  )
-}
+import {Post} from "./post";
 
 export class Timeline extends React.Component {
   constructor(props) {
@@ -18,13 +11,11 @@ export class Timeline extends React.Component {
 
   render() {
     const posts = this.state.posts;
-    let postsList = posts.map(function (post) {
-      return <Post
-          message={post.message}
-          time={post.created_at}
-      />
-    });
-    return postsList
+    return (
+        <div>
+          {postsList(posts)}
+        </div>
+    )
   }
 
   componentDidMount() {
@@ -35,4 +26,13 @@ export class Timeline extends React.Component {
       this.setState({posts: data})
     )
   }
+}
+
+function postsList(posts) {
+  return posts.map(function (post) {
+    return <Post
+        message={post.message}
+        time={post.created_at}
+    />
+  })
 }
