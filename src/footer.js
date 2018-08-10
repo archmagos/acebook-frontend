@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './footer.css';
+import ReactDOM from "react-dom";
 
 export class Footer extends React.Component {
   render(){
@@ -11,3 +12,5 @@ export class Footer extends React.Component {
     )
   }
 }
+
+ReactDOM.render(<Footer />, document.getElementById('footer'));
