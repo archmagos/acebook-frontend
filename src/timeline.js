@@ -15,11 +15,14 @@ export class Timeline extends React.Component {
   render() {
     const posts = this.state.posts;
     return (
-
-        <div>
+      <div className="timeline_content">
+        <div className="form_container">
           <NewPostForm updateParent={this.fetchPosts}/>
+        </div>
+        <div className="posts_content">
           {postsList(posts)}
         </div>
+      </div>
     )
   }
   componentDidMount() {
