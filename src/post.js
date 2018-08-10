@@ -35,7 +35,7 @@ export class Post extends React.Component {
 
   componentDidMount() {
     let id = this.state.id
-    fetch('http://localhost:3000/comments?post_id=' + id)
+    fetch('https://acebook2018.herokuapp.com/comments?post_id=' + id)
     .then(response => response.json())
     .then(data =>
       this.setState({comments: data})
