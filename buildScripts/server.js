@@ -5,7 +5,7 @@ import config from '../webpack.config.dev';
 
 const compiler = webpack(config);
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 const app = express();
 
 app.listen(port, function (error) {
