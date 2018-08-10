@@ -35,8 +35,8 @@ export class NewPostForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          Write a new post:
-          <input type="text" name="message" value={this.state.value} onChange={this.handleChange}/>
+          <b>Write a new post</b><br />
+          <input type="text" name="message" value={this.state.value} onChange={this.handleChange} id="new_post"/>
         </label>
         <input type="submit" value="Submit"/>
       </form>

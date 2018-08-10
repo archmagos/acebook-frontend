@@ -60,3 +60,19 @@ p {
 .container_footer b {
   color: #34569B;
 }
+
+.form_container {
+  background-color: white;
+  margin: 0 auto 0 auto;
+  padding: 15px 15px 10px 15px;
+  width: 660px;
+}
+
+.form_container b {
+  color: #34569B;
+}
+
+#new_post {
+  margin: 10px 0 10px 0;
+  width: 100%;
+}
