@@ -22,10 +22,13 @@ export class Timeline extends React.Component {
     )
   }
   componentDidMount() {
+    console.log('before')
     this.fetchPosts();
-    this.intervalId = setInterval(this.fetchPosts().bind(this), 2000);
+    const fetchPosts = this.fetchPosts.bind(this);
+    this.intervalId = setInterval(fetchPosts, 2000);
   }
   componentWillUnmount() {
+    console.log('will unmount')
     clearInterval(this.intervalId);
   }
 
