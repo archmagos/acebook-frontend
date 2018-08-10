@@ -3,7 +3,7 @@ import {Post} from "./post";
 import {NewPostForm} from "./newPostForm";
 
 export class Timeline extends React.Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       posts: [],
