@@ -25,8 +25,9 @@ export class Timeline extends React.Component {
     this.fetchPosts();
     this.intervalId = setInterval(this.fetchPosts().bind(this), 2000);
   }
-  componentWillUnmount(){
+  componentWillUnmount() {
     clearInterval(this.intervalId);
+  }
 
   fetchPosts() {
     console.log('API Called');
