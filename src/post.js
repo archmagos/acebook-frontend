@@ -1,6 +1,7 @@
 import React from "react";
 import {Comment} from './comment';
 import css from './post.css';
+import moment from "moment";
 
 export class Post extends React.Component {
   constructor(props) {
@@ -45,9 +46,10 @@ export class Post extends React.Component {
 
 function commentsList(comments) {
   return comments.map(function(comment) {
+    var date = new Date(comment.created_at)
     return <Comment
       body={comment.body}
-      time={comment.created_at}
+      time={moment(date).format('MMMM D') + ' at ' + moment(date).format('h:mma')}
       user={comment.user}
       />
     })
