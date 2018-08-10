@@ -26,5 +26,11 @@ p {
 }
 
 .container {
-  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+.full_container {
+  min-height: 100%;
+  position: relative;
 }

@@ -8,15 +8,14 @@ import css from './index.css';
 class App extends React.Component {
   render(){
     return(
-      <div className="container">
-        <div className="container_header">
-          <Header />
-        </div>
-        <div className="container_content" id="content">
-          <Timeline />
-        </div>
-        <div className="container_footer">
-          <Footer />
+      <div className="full_container">
+        <div className="container">
+          <div className="container_header">
+            <Header />
+          </div>
+          <div className="container_content" id="content">
+            <Timeline />
+          </div>
         </div>
       </div>
     )
@@ -24,3 +23,4 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<Footer />, document.getElementById('footer'));

@@ -3,13 +3,14 @@
   box-shadow: 0 -5px 4px #E2E4EA;
   bottom: 0;
   color: #909090;
+  display: inline-block;
   font-size: 12px;
   height: auto;
   letter-spacing: 0.9px;
   line-height: 18px;
   margin: 20px 0 0 0;
   padding: 15px 0 15px;
-  position: absolute;
+  position: fixed;
   text-align: center;
   width: 100%;
 }
