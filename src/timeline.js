@@ -41,6 +41,7 @@ function postsList(posts) {
   return posts.map(function (post) {
     var date = new Date(post.created_at)
     return <Post
+        user={post.user_name}
         message={post.message}
         time={moment(date).format('MMMM D') + ' at ' + moment(date).format('h:mma')}
         id={post.id}

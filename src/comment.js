@@ -7,7 +7,7 @@ export class Comment extends React.Component {
     this.state = {
       body: props.body,
       time: props.time,
-      user: props.user_id
+      user: props.user
     }
   }
 
@@ -19,7 +19,7 @@ export class Comment extends React.Component {
       <div className = "comment">
         <div className = "comment_header">
           <div className = "comment_header_username">
-            Username
+            {user}
           </div>
           <div className = "comment_header_body">
             {body}
