@@ -3,7 +3,7 @@ import {Post} from "./post";
 import {NewPostForm} from "./newPostForm";
 
 export class Timeline extends React.Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       posts: [],
@@ -21,14 +21,20 @@ export class Timeline extends React.Component {
         </div>
     )
   }
-
   componentDidMount() {
+    console.log('before')
     this.fetchPosts();
+    const fetchPosts = this.fetchPosts.bind(this);
+    this.intervalId = setInterval(fetchPosts, 2000);
+  }
+  componentWillUnmount() {
+    console.log('will unmount')
+    clearInterval(this.intervalId);
   }
 
   fetchPosts() {
     console.log('API Called');
-    fetch('http://localhost:3000/posts')
+    fetch('https://acebook2018.herokuapp.com/posts')
         .then(response => response.json())
         .then(data =>
             this.setState({posts: data})
