@@ -7,10 +7,24 @@ html, body {
   padding: 0 !important;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
 p {
   margin: 0;
 }
 
-.container_content {
-  padding: 0 20px 0 20px;
+.app {
+  margin: 0 !important;
+  max-height: 100%;
+  padding: 0 !important;
+}
+
+.container {
+  height: 100%;
 }

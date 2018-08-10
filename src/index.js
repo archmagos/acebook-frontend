@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Header} from "./header.js";
 import {Timeline} from "./timeline";
+import {Footer} from "./footer";
 import css from './index.css';
 
 class App extends React.Component {
@@ -13,6 +14,9 @@ class App extends React.Component {
         </div>
         <div className="container_content" id="content">
           <Timeline />
+        </div>
+        <div className="container_footer">
+          <Footer />
         </div>
       </div>
     )

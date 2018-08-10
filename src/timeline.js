@@ -29,7 +29,7 @@ export class Timeline extends React.Component {
 }
 
 function postsList(posts) {
-  return posts.map(function (post) {
+  return posts.reverse().map(function (post) {
     return <Post
         message={post.message}
         time={post.created_at}

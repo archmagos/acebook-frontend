@@ -21,7 +21,7 @@ export class Post extends React.Component {
       <div className="post">
         <div className="post_header">
           <p id="post_username">Username</p>
-          <p id="post_time">Posted at {time}</p>
+          <p id="post_time">{time}</p>
         </div>
         <div className="post_body">
           {message}
@@ -43,12 +43,12 @@ export class Post extends React.Component {
   }
 }
 
-  function commentsList(comments) {
-    return comments.map(function(comment) {
-      return <Comment
-        body={comment.body}
-        time={comment.created_at}
-        user={comment.user}
-        />
-      })
-    }
+function commentsList(comments) {
+  return comments.map(function(comment) {
+    return <Comment
+      body={comment.body}
+      time={comment.created_at}
+      user={comment.user}
+      />
+    })
+}
