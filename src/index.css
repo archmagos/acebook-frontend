@@ -1,0 +1,30 @@
+html, body {
+  background-color: #E7ECF2;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+.app {
+  margin: 0 !important;
+  max-height: 100%;
+  padding: 0 !important;
+}
+
+.container {
+  height: 100%;
+}

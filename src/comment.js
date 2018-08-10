@@ -1,4 +1,5 @@
 import React from 'react'
+import css from './comment.css';
 
 export class Comment extends React.Component {
   constructor(props) {
@@ -11,15 +12,23 @@ export class Comment extends React.Component {
   }
 
   render() {
-
     let body = this.state.body;
     let time = this.state.time;
     let user = this.state.user;
     return(
-      <div> {body}
-            {time}
-            {user}
-     </div>
+      <div className = "comment">
+        <div className = "comment_header">
+          <div className = "comment_header_username">
+            Username
+          </div>
+          <div className = "comment_header_body">
+            {body}
+          </div>
+        </div>
+        <div className = "comment_footer">
+          {time}
+        </div>
+      </div>
     )
   }
 }

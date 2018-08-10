@@ -1,5 +1,6 @@
 import React from "react";
 import {Comment} from './comment';
+import css from './post.css';
 
 export class Post extends React.Component {
   constructor(props) {
@@ -17,10 +18,18 @@ export class Post extends React.Component {
     let message = this.state.message;
     let time = this.state.time
     return (
-        <div className="post">
-          {message} <br/> (posted at {time})
+      <div className="post">
+        <div className="post_header">
+          <p id="post_username">Username</p>
+          <p id="post_time">{time}</p>
+        </div>
+        <div className="post_body">
+          {message}
+        </div>
+        <div className="post_footer">
           {commentsList(comments)}
         </div>
+      </div>
     )
   }
 
@@ -34,12 +43,12 @@ export class Post extends React.Component {
   }
 }
 
-  function commentsList(comments) {
-    return comments.map(function(comment) {
-      return <Comment
-        body={comment.body}
-        time={comment.created_at}
-        user={comment.user}
-        />
-      })
-    }
+function commentsList(comments) {
+  return comments.map(function(comment) {
+    return <Comment
+      body={comment.body}
+      time={comment.created_at}
+      user={comment.user}
+      />
+    })
+}
