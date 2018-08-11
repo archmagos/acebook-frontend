@@ -1,6 +1,8 @@
 # AceBook Engineering Project (Front-end)
 
-This repo serves as the Express/React front-end to the Acebook Engineering Project hosted on Rails. Please see [this repo](https://github.com/archmagos/acebook-nice-team) for full project details.
+**Acebook** is [now deployed to Heroku](http://acebook-frontend.herokuapp.com/).
+
+This repo serves as the Express/React front-end to the Acebook Engineering Project hosted on Rails. Please see [this repo](https://github.com/archmagos/acebook-nice-team) for full project details and our final project outcomes.
 
 ## Implementation
 
